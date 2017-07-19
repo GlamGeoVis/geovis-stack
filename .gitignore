@@ -1,3 +1,4 @@
 sim-city-cs/
 simcity-slurm/simulations/
-simcity-webservice/simulations/
+simcity-commonsense/csWeb/
+simcity-webservice/simulations/*.min.json

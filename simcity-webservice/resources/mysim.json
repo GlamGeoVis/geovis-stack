@@ -2,12 +2,12 @@
     "id": "matsim",
     "title": "matsim",
     "featureTypes": {
-        "FireStation": {
+        "MapPoint": {
             "id": "SimCity#firestation",
-            "name": "FireStation",
+            "name": "MapPoint",
             "style": {
                 "drawingMode": "Point",
-                "iconUri": "images/brandweerposten/Brandweerkazerne.png",
+                "iconUri": "data/projects/simcity-demo/images/pin.png",
                 "cornerRadius": 50,
                 "fillColor": "#ffffff",
                 "iconWidth": 30,
@@ -17,22 +17,7 @@
             "propertyTypeKeys": "title,notes",
             "u": "bower_components/csweb/dist-bower/images/marker.png"
         },
-        "Fire": {
-            "id": "SimCity#fire",
-            "name": "Fire",
-            "style": {
-                "drawingMode": "Point",
-                "iconUri": "data/images/fire.png",
-                "cornerRadius": 50,
-                "fillColor": "#ffffff",
-                "iconWidth": 30,
-                "iconHeight": 30,
-                "strokeColor": "#ffffff"
-            },
-            "propertyTypeKeys": "title,notes",
-            "u": "bower_components/csweb/dist-bower/images/marker.png"
-        },
-        "Ward": {
+        "FeatureCollection": {
             "id": "SimCity#Ward",
             "name": "Ward",
             "style": {
@@ -45,15 +30,6 @@
                 "strokeColor": "#ffffff"
             },
             "propertyTypeKeys": "ward_name;ward_no;cmc_mc_nm;tot_p;first_responder;second_responder",
-            "u": "bower_components/csweb/dist-bower/images/marker.png"
-        },
-        "FirePath": {
-            "id": "SimCity#FirePath",
-            "name": "FirePath",
-            "propertyTypeKeys": "departure;arrival;responsetime;finish;return",
-            "style": {
-                "drawingMode": "Line"
-            },
             "u": "bower_components/csweb/dist-bower/images/marker.png"
         }
     },
@@ -105,46 +81,6 @@
             "label": "tot_p",
             "type": "number",
             "title": "Total Population",
-            "canEdit": false,
-            "isSearchable": true,
-            "visibleInCallOut": true
-        },
-        "departure": {
-            "label": "departure",
-            "type": "number",
-            "title": "Departure",
-            "canEdit": false,
-            "isSearchable": true,
-            "visibleInCallOut": true
-        },
-        "arrival":{
-            "label": "arrival",
-            "type": "number",
-            "title": "Arrival",
-            "canEdit": false,
-            "isSearchable": true,
-            "visibleInCallOut": true
-        },
-        "responsetime":{
-            "label": "responsetime",
-            "type": "number",
-            "title": "Response Time",
-            "canEdit": false,
-            "isSearchable": true,
-            "visibleInCallOut": true
-        },
-        "finish": {
-            "label": "finsh",
-            "type": "number",
-            "title": "Finish",
-            "canEdit": false,
-            "isSearchable": true,
-            "visibleInCallOut": true
-        },
-        "return": {
-            "label": "return",
-            "type": "number",
-            "title": "Return",
             "canEdit": false,
             "isSearchable": true,
             "visibleInCallOut": true

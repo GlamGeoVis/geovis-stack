@@ -1,26 +1,20 @@
-# sim-city-stack
-Full Sim-City Stack using docker files and docker-compose.
+# GeoVis-stack
+Full tool stack for Geo-Visualization (based on [Sim-City Stack](https://github.com/indodutch/sim-city-stack)) using docker files and docker-compose.
 
-The goal of this stack is to set up a development infrastructure of the sim-city stack
-it is not meant for production deployment!
-
-The full documentation is available at http://sim-city-stack.readthedocs.io/
+The goal of this stack is to set up a demo infrastructure of the sim-city stack, using  it is not meant for production deployment!
 
 First, install docker and docker-compose.
 
-Check out the [sim-city-cs](https://github.com/indodutch/sim-city-cs) repository in the same directory as
-this repo.
-Put your simulation scripts in the simcity-slurm/simulations/ directory with their respective .json description
-in the simcity-webservice/simulations/ directory. Check the documentation for more information on adding simulations
-to the system.
+Put your simulation scripts in the `simcity-slurm/simulations/` directory with their respective `.json` description
+in the `simcity-webservice/simulations/` directory. Resource description should be on the `simcity-webservice/resources/` directory. Check the [documentation](http://sim-city-stack.readthedocs.io/en/latest/NewSimulation.html) for more information on adding simulations to the system.
 
 Then, run a test infrastructure with
 ```
-docker-compose -f docker-compose-demo.yml up --build
+docker-compose up --build
 ```
-The sim-city frontend is now available on http://localhost:8008/. Commonsense is running on localhost:3003.
+The sim-city frontend is now available on http://localhost:8008/.
 
-The sim-city-webservice is now available on localhost/explore/
+Commonsense is running on localhost:3003. The sim-city-webservice is now available on localhost/explore/
 There is a CouchDB database running for tasks jobs on on localhost/couchdb/
 A webdav server is running on localhost/webdav/
 
@@ -30,18 +24,14 @@ Finally, a slurm cluster is running to run simulations.
 
 # The Docker Components
 
-## simcity-commonsense
-This docker container runs the front end. The directory sim-city-cs is mounted into the docker image
-in /home/simcity/sim-city-cs. You can edit typescript and html files in this directory from outside the
-docker, which will trigger a recompilation of the files and a restart of the server using nodemon.
-
-The sim-city-cs docker is accessible over SSH on port 30022 (user `simcity`, password `simcity`).
+## commonsense
+This docker container runs the front end.
 
 ## simcity-webservice
 This docker hosts the simcity-webservice. The simulations directory is copied into the docker when it is built.
 Changing the files in this directory therefore requires rebuilding the docker image.
 
-The sim-city-webservice docker is accessible over SSH on port 20022 (user `simcity`, password `simcity`).
+The sim-city-webservice docker is accessible over SSH on port 30022 (user `simcity`, password `simcity`).
 
 ## simcity-slurm
 This docker hosts a slurm cluster with 2 nodes. The simulations directory is copied into the docker when it is built

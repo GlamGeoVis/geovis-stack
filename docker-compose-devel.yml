@@ -1,7 +1,6 @@
 version: '2'
 services:
   db:
-#    image: klaemo/couchdb:1.6.1
     build:
       context: simcity-couchdb
     ports:
@@ -37,6 +36,18 @@ services:
       - slurm
     volumes:
       - ./simcity-webservice/simulations/:/home/simcity/sim-city-webservice/simulations/
+      - ./simcity-webservice/resources/:/home/simcity/sim-city-webservice/resources/
+  commonsense:
+    build:
+      context: simcity-commonsense
+      dockerfile: Dockerfile-devel
+    ports:
+      - "127.0.0.1:3003:3003"
+      - "127.0.0.1:20022:22"
+    volumes:
+      - ./simcity-commonsense/csWeb/:/home/simcity/simcity/csWeb
+      - ./simcity-commonsense/sim-city-cs/:/home/simcity/simcity/sim-city-cs
+      - ./simcity-commonsense/projects:/home/simcity/simcity/sim-city-cs/public/data/projects
   nginx:
     build:
       context: simcity-nginx
@@ -46,3 +57,4 @@ services:
       - db:couchdb
       - webdav
       - simcity_webservice
+      - commonsense
