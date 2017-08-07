@@ -1,0 +1,70 @@
+{
+  "latest": "0.1",
+  "0.1": {
+    "command": "~/simulations/necklace/run.sh",
+    "parallelism": "*",
+    "resourceTypeUrl": "/explore/resource/necklace",
+    "form": [
+      "radius",
+      {
+        "key": "centre",
+        "type": "layer",
+        "startEmpty": true,
+        "add": null,
+        "remove": null,
+        "type": "layer",
+        "layer": "input_point",
+        "featureId": "MapPoint",
+        "items": [
+          {
+            "type": "point2d"
+          }
+        ]
+      },
+      {
+        "key": "myDataLayer",
+        "type": "dataLayer"
+      }
+    ],
+    "properties": {
+      "radius": {
+        "type": "number",
+        "minimum": 1,
+        "maximum": 50,
+        "default": 10,
+        "title": "Radius",
+        "description": "Radius of a circle"
+      },
+      "centre": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "x": {
+              "type": "number"
+            },
+            "y": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "x",
+            "y"
+          ]
+        },
+        "title": "Centre",
+        "description": "Centre of a circle"
+      },
+      "myDataLayer": {
+        "type": "string",
+        "title": "Data Layer",
+        "description": "Layer where data is taken from",
+        "layerGroup": "Availablelayer"
+      }
+    },
+    "required": [ "radius", "centre", "myDataLayer" ]
+  }
+}

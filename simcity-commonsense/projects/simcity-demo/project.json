@@ -127,7 +127,23 @@
                },
                "type": "GeoJson",
                "url": "data/projects/simcity-demo/resources/provinces.geojson",
-               "typeUrl": "data/projects/simcity-demo/resources/mysim.json",
+               "typeUrl": "data/projects/simcity-demo/resources/necklace.json",
+               "enabled": false,
+               "opacity": 50
+
+          },
+          {
+               "id": "ProvincesNL2",
+               "reference": "provinces-nl",
+               "languages": {
+                   "en": {
+                       "title": "Copy of dutch provinces",
+                       "description": "Provinces of the Netherlands"
+                   }
+               },
+               "type": "GeoJson",
+               "url": "data/projects/simcity-demo/resources/provinces.geojson",
+               "typeUrl": "data/projects/simcity-demo/resources/necklace.json",
                "enabled": false,
                "opacity": 50
 
@@ -138,7 +154,7 @@
   ],
   "simAdmin": {
     "webserviceUrl": "/explore",
-    "simulationName": "mysim",
+    "simulationName": "necklace",
     "simulationVersion": "latest"
   },
   "simulationEngines": [
