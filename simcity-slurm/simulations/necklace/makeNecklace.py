@@ -12,12 +12,12 @@ inputs = json.load(open(inputsFile))
 baseUrl = 'http://nginx:8008/'
 agaJar = '/home/xenon/simulations/necklace/agalib-r1.jar'
 layerFile = 'input.geojson'
-columnName = 'size'
 
 x = float(inputs['centre'][0]['x'])
 y = float(inputs['centre'][0]['y'])
 r = float(inputs['radius'])
-layer = inputs['myDataLayer']
+columnName = inputs['myDataLayer']['columnName']
+layer = inputs['myDataLayer']['layerName']
 layerUrl = baseUrl + layer
 
 print('WGET: ' + layerUrl)

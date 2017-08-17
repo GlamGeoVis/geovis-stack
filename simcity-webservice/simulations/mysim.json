@@ -20,10 +20,6 @@
             "type": "point2d"
           }
         ]
-      },
-      {
-        "key": "myDataLayer",
-        "type": "dataLayer"
       }
     ],
     "properties": {
@@ -57,14 +53,8 @@
         },
         "title": "Centre",
         "description": "Centre of a circle"
-      },
-      "myDataLayer": {
-        "type": "string",
-        "title": "Data Layer",
-        "description": "Layer where data is taken from",
-        "layerGroup": "Availablelayer"
       }
     },
-    "required": [ "radius", "centre", "myDataLayer" ]
+    "required": [ "radius", "centre" ]
   }
 }

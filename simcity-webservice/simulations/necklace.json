@@ -4,6 +4,7 @@
     "command": "~/simulations/necklace/run.sh",
     "parallelism": "*",
     "resourceTypeUrl": "/explore/resource/necklace",
+    "title": "New necklace map overlay",
     "form": [
       "radius",
       {
@@ -59,12 +60,16 @@
         "description": "Centre of a circle"
       },
       "myDataLayer": {
-        "type": "string",
+        "type": "object",
         "title": "Data Layer",
         "description": "Layer where data is taken from",
-        "layerGroup": "Availablelayer"
+        "layerGroup": "Availablelayer",
+        "default": {
+          "layerName": "SomeLayerName",
+          "columnName": "SomeColumnName"
+        }
       }
     },
-    "required": [ "radius", "centre", "myDataLayer" ]
+    "required": [ "name", "radius", "centre", "myDataLayer" ]
   }
 }

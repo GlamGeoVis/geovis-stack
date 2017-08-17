@@ -1,0 +1,49 @@
+{
+    "id": "mysim",
+    "title": "mysim",
+    "featureTypes": {
+        "centre": {
+            "id": "SimCity#centre",
+            "name": "centre",
+            "style": {
+                "drawingMode": "Point",
+                "iconUri": "images/brandweerposten/Brandweerkazerne.png",
+                "cornerRadius": 50,
+                "fillColor": "#ffffff",
+                "iconWidth": 30,
+                "iconHeight": 30,
+                "strokeColor": "#ffffff"
+            },
+            "propertyTypeKeys": "title,notes",
+            "u": "bower_components/csweb/dist-bower/images/marker.png"
+        },
+        "fill": {
+          "name": "fill",
+          "style": {
+            "drawingMode": "MultiPolygon",
+            "strokeWidth": 1,
+            "iconWidth": 30,
+            "iconHeight": 30,
+            "iconUri": "images/4018 zorgkantoor.png",
+            "nameLabel": "fill",
+            "maxTitleResolution": -1,
+            "fillColor": "#99ff99",
+            "strokeColor": "#000000"
+          },
+          "propertyTypeKeys": "fill"
+        }
+    },
+    "propertyTypeData": {
+        "fill": {
+          "canEdit": true,
+          "id": "data/projects/simcity-demo/resources/necklace.json#fill",
+          "isSearchable": false,
+          "label": "fill",
+          "stringFormat": "{0:0,0}",
+          "title": "Fill colour",
+          "type": "color",
+          "visibleInCallOut": true
+        }
+    },
+    "isDynamic": false
+}
