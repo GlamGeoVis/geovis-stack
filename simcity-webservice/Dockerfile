@@ -9,3 +9,6 @@ RUN rm /home/simcity/sim-city-webservice/simulations/*.min.json || true
 
 RUN chown simcity:simcity /home/simcity/sim-city-webservice/config.ini
 RUN chown simcity:simcity /home/simcity/sim-city-webservice/simulations
+
+# Horrible hack while PR gets accepted...
+COPY ./script-app.py /home/simcity/sim-city-webservice/scripts/app.py
