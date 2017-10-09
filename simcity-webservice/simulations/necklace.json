@@ -68,6 +68,9 @@
           "layerName": "SomeLayerName",
           "columnName": "SomeColumnName"
         }
+      },
+      "name": {
+        "type": "string"
       }
     },
     "required": [ "name", "radius", "centre", "myDataLayer" ]
